@@ -16,36 +16,30 @@ Since the `react` component of `Sortablejs` has not been updated, it has been se
 
 We have encapsulated a variety of usages for this, you can use components, function, or instructions, there is always one that suits you
 
+
 ## Solve pain points
 
-In `Sortablejs` official `Vue` components in the past, the drag-and-drop list is implemented by using the component as a direct child element of the list. When we use some component libraries, if there is no slot for the root element of the list in the component library , it is difficult for us to implement a drag list, vue-draggable-plus perfectly solves this problem, it allows you to use a drag list on any element, we can use the selector of the specified element to get the root element of the list, and then Use the root element of the list as `container` of `Sortablejs`, for details, refer to [specify target container](/demo/target-container/).
+In `Sortablejs` official `React` components in the past, the drag-and-drop list is implemented by using the component as a direct child element of the list. When we use some component libraries, if there is no slot for the root element of the list in the component library , it is difficult for us to implement a drag list, react-draggable-plus perfectly solves this problem, it allows you to use a drag list on any element, we can use the selector of the specified element to get the root element of the list, and then Use the root element of the list as `container` of `Sortablejs`, for details, refer to [specify target container](/demo/target-container/).
 
 ## Install
 
-```bash
-
-npm install react-draggable-plus
-
-```
+<InstallDependencies 
+  npm='$ npm install react-draggable-plus ' 
+  yarn='$ yarn add react-draggable-plus' 
+  pnpm='$ pnpm install react-draggable-plus ' 
+/>
+</InstallDependencies>
 
 ## Usage
 
 ### Component usage
 
 ```ts
-<template>
-    <VueDraggable ref="el" v-model="list">
-      <div v-for="item in list" :key="item.id">
-        {{ item.name }}
-      </div>
-    </VueDraggable>
-</template>
-
-<script setup lang="ts">
-import { ref } from 'vue'
-import { VueDraggable } from 'vue-draggable-plus'
-const list = ref([
-  {
+import React, { useRef, useState } from "react"
+import { ReactDraggablePlush } from 'react-draggable-plus'
+const Demo = () => {
+  const el = useRef<any>(null)
+  const [list, setList] = useState([{
     name: 'Joao',
     id: 1
   },
@@ -60,8 +54,73 @@ const list = ref([
   {
     name: 'Juan',
     id: 4
+  }])
+  const changeListHanlde = (item: any[]) => {
+    setList([...item])
   }
-])
-</script>
+  return <>
+    <ReactDraggablePlush
+      ref={el}
+      list={list}
+      onChangeList={changeListHanlde}
+      animation={150}
+      ghostClass="ghost"
+      className="flex flex-col gap-2 p-4 w-300px h-360px m-r-40px bg-gray-500/5 rounded"
+    >
+      {
+        list.map(item => {
+          return <div className="cursor-move h-30 bg-gray-500/5 rounded p-3" key={item.id}>{item.name}</div>
+        })
+      }
+    </ReactDraggablePlush>
+  </>
+}
+export default Demo
 ```
 
+### Function Usage
+
+```ts
+import React, { useRef, useState } from "react"
+import { useDraggable } from "react-draggable-plus"
+const Function = () => {
+  const el = useRef<any>(null)
+  const [list, setList] = useState([{
+    name: 'Joao',
+    id: 1
+  },
+  {
+    name: 'Jean',
+    id: 2
+  },
+  {
+    name: 'Johanna',
+    id: 3
+  },
+  {
+    name: 'Juan',
+    id: 4
+  }])
+  const changeListHanlde = (item: any[]) => {
+    setList([...item])
+  }
+  const { start } = useDraggable(el, list, changeListHanlde, {
+    animation: 150,
+    ghostClass: 'ghost',
+    onStart() {
+      console.log('start')
+    },
+    onUpdate() {
+      console.log('update')
+    }
+  })
+  return <div className="flex flex-col gap-2 p-4 w-300px h-360px m-r-40px bg-gray-500/5 rounded" ref={el}>
+    {
+      list.map(item => {
+        return <div className="cursor-move h-30 bg-gray-500/5 rounded p-3" key={item.id}>{item.name}</div>
+      })
+    }
+  </div>
+}
+export default Function
+```

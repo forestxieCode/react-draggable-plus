@@ -11,9 +11,14 @@ toc: content
 ## Component Usage
 Single list drag and drop sorting
 
-<code src="./demo.tsx"></code>
+<code src="./demo.tsx" 
+title="Component usage" 
+description="Use components to complete drag and drop sorting"></code>
 
 
 ## Function Usage
 
-<code src="./function.tsx"></code>
+<code src="./function.tsx"
+title="function usage"
+desc="Use function to complete drag and drop sorting"
+></code>

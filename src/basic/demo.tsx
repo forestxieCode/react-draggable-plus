@@ -46,7 +46,7 @@ const Demo = () => {
           disabled={disabled}
           animation={150}
           ghostClass="ghost"
-          className="flex flex-col gap-2 p-4 w-300px h-300px m-r-40px bg-gray-500/5 rounded"
+          className="flex flex-col gap-2 p-4 w-300px h-360px m-r-40px bg-gray-500/5 rounded"
           onStart={startHandle}
           onUpdate={updateHandle}
           onEnd={endHandle}

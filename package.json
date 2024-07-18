@@ -77,7 +77,9 @@
     "@umijs/lint": "^4.0.0",
     "@umijs/plugins": "^4.3.6",
     "@unocss/cli": "^0.61.5",
+    "classnames": "^2.5.1",
     "dumi": "^2.3.0",
+    "dumi-theme-antd": "^0.4.1",
     "eslint": "^8.23.0",
     "father": "^4.1.0",
     "husky": "^8.0.1",
@@ -87,6 +89,7 @@
     "prettier-plugin-packagejson": "^2.2.18",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "sortablejs": "^1.15.2",
     "stylelint": "^14.9.1",
     "unocss": "^0.61.5"
   }

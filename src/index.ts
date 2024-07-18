@@ -1,2 +1,2 @@
-export { default as ReactDraggablePlush } from './compoents'
-export { useDraggable } from './useDraggable';
+export { default as ReactDraggablePlush } from './core/compoents'
+export { useDraggable } from './core/useDraggable';

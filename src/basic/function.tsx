@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react"
+import { useDraggable } from "react-draggable-plus"
 import PreviewList from "react-draggable-plus/builtins/PreviewList"
-import { useDraggable } from "react-draggable-plus/useDraggable"
 
-const Demo = () => {
+const Function = () => {
   const el = useRef<any>(null)
   const [list, setList] = useState([{
     name: 'Joao',
@@ -22,7 +22,6 @@ const Demo = () => {
   }])
   const changeListHanlde = (item: any[]) => {
     setList([...item])
-    console.log('after', item)
   }
   const { start } = useDraggable(el, list, changeListHanlde, {
     animation: 150,
@@ -37,7 +36,7 @@ const Demo = () => {
   return <>
     <button type="button" onClick={() => start()}>start</button>
     <div className="flex m-t-20px">
-      <div className="flex flex-col gap-2 p-4 w-300px h-300px m-r-40px bg-gray-500/5 rounded" ref={el}>
+      <div className="flex flex-col gap-2 p-4 w-300px h-360px m-r-40px bg-gray-500/5 rounded" ref={el}>
         {
           list.map(item => {
             return <div className="cursor-move h-30 bg-gray-500/5 rounded p-3" key={item.id}>{item.name}</div>
@@ -48,4 +47,4 @@ const Demo = () => {
     </div>
   </>
 }
-export default Demo
+export default Function
