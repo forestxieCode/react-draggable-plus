@@ -27,12 +27,6 @@ const Demo = () => {
     name: `${item.name}-2`,
     id: `${item.id}-2`
   })))
-  const changeListHanlde = (item: any[]) => {
-    setList([...item])
-  }
-  const changeList2Hanlde = (item: any[]) => {
-    setList2([...item])
-  }
   const addHandle = () => {
     console.log('add')
   }
@@ -44,12 +38,11 @@ const Demo = () => {
   }
 
   return <>
-
       <div className="flex">
         <ReactDraggablePlush
           ref={el}
           list={list}
-          onChangeList={changeListHanlde}
+          setList={setList}
           animation={150}
           ghostClass="ghost"
           group="people"
@@ -67,7 +60,7 @@ const Demo = () => {
         <ReactDraggablePlush
           ref={el}
           list={list2}
-          onChangeList={changeList2Hanlde}
+          setList={setList2}
           animation={150}
           ghostClass="ghost"
           group="people"

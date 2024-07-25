@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react"
 import { useDraggable } from "react-draggable-plus"
 import PreviewList from "react-draggable-plus/builtins/PreviewList"
+import Sortable from "sortablejs"
 
 const Function = () => {
   const el1 = useRef<any>(null)
@@ -24,6 +25,7 @@ const Function = () => {
       id: 4
     }
   ]
+  const group:Sortable.GroupOptions =  { name: "people", pull: "clone", put: false}
   const [list1, setList1] = useState(data)
   const [list2, setList2] = useState(data.map(item => ({
     name: `${item.name}-2`,
@@ -32,31 +34,18 @@ const Function = () => {
 
   useDraggable(el1, list1, setList1, {
     animation: 150,
-    ghostClass: 'ghost',
-    group: 'people',
-    onUpdate: () => {
-      console.log('update list1')
-    },
-    onAdd: () => {
-      console.log('add list1')
-    },
-    onMove: () => {
-      console.log('remove list1')
+    group,
+    sort: false,
+    onClone: () => {
+      console.log('clone')
     }
   })
 
   useDraggable(el2, list2, setList2, {
     animation: 150,
-    ghostClass: 'ghost',
     group: 'people',
-    onUpdate: () => {
-      console.log('update list2')
-    },
-    onAdd: () => {
-      console.log('add list2')
-    },
-    onMove: () => {
-      console.log('remove list2')
+    onClone: () => {
+      console.log('clone')
     }
   })
 

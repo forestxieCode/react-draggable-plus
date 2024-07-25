@@ -51,14 +51,11 @@ const Demo = () => {
     name: 'Juan',
     id: 4
   }])
-  const changeListHanlde = (item: any[]) => {
-    setList([...item])
-  }
   return <>
     <ReactDraggablePlush
       ref={el}
       list={list}
-      onChangeList={changeListHanlde}
+      setList={setList}
       animation={150}
       ghostClass="ghost"
       className="flex flex-col gap-2 p-4 w-300px h-360px m-r-40px bg-gray-500/5 rounded"

@@ -21,9 +21,6 @@ const Demo = () => {
     id: 4
   }])
   const [disabled, setDisabled] = useState(false)
-  const changeListHanlde = (item: any[]) => {
-    setList([...item])
-  }
   const startHandle = () => {
     console.log('start')
   }
@@ -42,7 +39,7 @@ const Demo = () => {
         <ReactDraggablePlush
           ref={el}
           list={list}
-          onChangeList={changeListHanlde}
+          setList={setList}
           disabled={disabled}
           animation={150}
           ghostClass="ghost"

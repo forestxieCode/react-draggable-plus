@@ -152,6 +152,6 @@ The component's props include all options from `Sortablejs` and can be passed to
 | Parameter              | Description                                                   | Required | Default |
 |------------------------|---------------------------------------------------------------|----------|---------|
 | list                   | Pass the list data                                            | yes   | -      |
-| onChangeList           | Triggered when data is modified                               | yes   | -      |
+| setList                | Triggered when data is modified                               | yes   | -      |
 | tag                    | The tag name of the component's root element                  | No       | `div`   |
 | target                 | Specifies the target container. If not provided, the component's root element is used as the container. See [Target Container](/demo/target-container/) for details. | No       | -       |

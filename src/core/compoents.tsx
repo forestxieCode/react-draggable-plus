@@ -3,7 +3,7 @@ import { useDraggable, UseDraggableOptions, UseDraggableReturn } from './useDrag
 
 export interface IDraggableProps extends UseDraggableOptions<any> {
   list: any[]
-  onChangeList: (list: any[]) => void
+  setList: (list: any[]) => void
   tag?: string
   target?: string
   children?: React.ReactNode;
@@ -15,9 +15,9 @@ export interface IDraggable extends UseDraggableReturn {
 }
 
 const ReactDraggable: React.ForwardRefRenderFunction<IDraggable, IDraggableProps> = (props, ref) => {
-  const { list= [], onChangeList, className, ...options } = props
+  const { list= [], setList, className, ...options } = props
   const target = useRef(null);
-  const draggable = useDraggable((props?.target || target) as string, list, onChangeList, options)
+  const draggable = useDraggable((props?.target || target) as string, list, setList, options)
   useImperativeHandle(ref, () => ({
     el: target.current,
     ...draggable,

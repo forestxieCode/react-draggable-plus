@@ -70,20 +70,20 @@ export interface UseDraggableOptions<T> extends Options {
  * A custom compositionApi utils that allows you to drag and drop elements in lists.
  * @param el
  * @param {Array} list - The list to be dragged
- * @param {Event} onChangeList - The list to be dragged
+ * @param {Event} setList - The list to be dragged
  * @param {Object} options - The options of the sortable
  * @returns {Object} - The return of the sortable
  */
 export function useDraggable<T>(
   el: RefOrElement,
   list?: T[] | undefined,
-  onChangeList?: (list: any[]) => void,
+  setList?: (list: any[]) => void,
   options?: RefOrValue<UseDraggableOptions<T>>
 ): UseDraggableReturn
 export function useDraggable<T>(
   el: null | undefined,
   list?: T[] | undefined,
-  onChangeList?: (list?: any[]) => void,
+  setList?: (list?: any[]) => void,
   options?: RefOrValue<UseDraggableOptions<T>>
 ): UseDraggableReturn
 export function useDraggable<T>(
@@ -105,7 +105,7 @@ export function useDraggable<T>(
 export function useDraggable<T>(...args: any[]): UseDraggableReturn {
   const el = args[0];
 
-  let [, list, onChangeList, options] = args
+  let [, list, setList, options] = args
   if (!Array.isArray(list)) {
     options = list
     list = null
@@ -120,8 +120,8 @@ export function useDraggable<T>(...args: any[]): UseDraggableReturn {
 
 
   function changeHandle(list: any) {
-    if(!onChangeList) return
-    onChangeList(list)
+    if(!setList) return
+    setList([...list])
   }
 
   /**
