@@ -98,10 +98,7 @@ const Function = () => {
     name: 'Juan',
     id: 4
   }])
-  const changeListHanlde = (item: any[]) => {
-    setList([...item])
-  }
-  const { start } = useDraggable(el, list, changeListHanlde, {
+  const { start } = useDraggable(el, list, setList, {
     animation: 150,
     ghostClass: 'ghost',
     onStart() {
