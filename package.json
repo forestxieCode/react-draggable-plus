@@ -1,7 +1,7 @@
 {
   "name": "react-draggable-plus",
   "version": "0.0.1",
-  "description": "A react library developed with dumi",
+  "description": "Universal Drag-and-Drop Component Supporting React",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -21,6 +21,11 @@
   "author": {
     "name": "forest",
     "email": "1397798719@qq.com"
+  },
+  "homepage": "https://forestxiecode.github.io/react-draggable-plus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forestxieCode/react-draggable-plus"
   },
   "license": "MIT",
   "keywords": [
@@ -65,7 +70,8 @@
   "peerDependencies": {
     "react": ">=16.9.0",
     "react-dom": ">=16.9.0",
-    "sortablejs": "^1.15.2"
+    "sortablejs": "^1.15.2",
+    "classnames": "^2.5.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
