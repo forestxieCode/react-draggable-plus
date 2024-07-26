@@ -3,6 +3,8 @@ import { defineThemeConfig } from 'dumi-theme-antd/dist/defineThemeConfig';
 
 export default defineConfig({
   outputPath: 'docs-dist',
+  base: process.env.NODE_ENV === 'production' ? "/react-draggable-plus" : "/",
+  publicPath: process.env.NODE_ENV === 'production' ? "/react-draggable-plus/" : "/",
   locales: [
     { id: 'zh-CN', name: '中文' },
     { id: 'en-US', name: 'EN' },
@@ -40,5 +42,5 @@ export default defineConfig({
   ],
   unocss: {
     watch: ['src/**/*.tsx']
-  },
+  }
 });
