@@ -4,9 +4,9 @@
 [![NPM downloads](http://img.shields.io/npm/dm/react-draggable-plus.svg?style=flat)](https://npmjs.org/package/react-draggable-plus)
 
 
-[中文文档]()
+[中文文档](https://forestxiecode.github.io/react-draggable-plus)
 
-Drag and drop sorting module, support React>=16
+Drag and drop sorting module, support React>=16.8
 
 ## Describe
 

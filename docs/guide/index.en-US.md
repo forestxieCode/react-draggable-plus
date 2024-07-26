@@ -7,7 +7,7 @@ nav:
 
 # react-draggable-plus
 
-Drag and drop sorting module, react >= 18.0
+Drag and drop sorting module, react >=16.8
 
 
 ## Description
