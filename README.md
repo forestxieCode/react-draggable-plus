@@ -33,7 +33,7 @@ npm install react-draggable-plus
 
 ```ts
 import React, { useRef, useState } from "react"
-import { ReactDraggablePlush } from 'react-draggable-plus'
+import { ReactDraggablePlush } from "react-draggable-plus"
 const Demo = () => {
   const el = useRef<any>(null)
   const [list, setList] = useState([{
