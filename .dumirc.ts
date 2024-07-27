@@ -27,12 +27,12 @@ export default defineConfig({
     features: {
       'zh-CN': [
         { title: '功能齐全', details: '全面继承 Sortable.js 的所有功能'},
-        { title: '灵活使用', details: '支持组件、指令、函数式调用，总有一款是您喜欢的'},
+        { title: '灵活使用', details: '支持组件、函数式调用，总有一款是您喜欢的'},
         { title: '自定义容器', details: '将指定容器作为拖拽容器'}
       ],
       'en-US': [
         { title: 'Fully functional', details: 'Full inheritance of all the features of Sortable.js'},
-        { title: 'Use flexibly', details: 'Support components, instructions, and function calls, there is always one you like'},
+        { title: 'Use flexibly', details: 'Support components, and function calls, there is always one you like'},
         { title: 'Custom containers', details: 'Drag and drop the specified container'}
       ],
     },

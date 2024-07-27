@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react"
-import { ReactDraggablePlush } from 'react-draggable-plus'
+import { ReactDraggablePlush } from "react-draggable-plus"
 import PreviewList from "react-draggable-plus/builtins/PreviewList"
 
 const Demo = () => {
