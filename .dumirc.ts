@@ -3,9 +3,7 @@ import pkgJSON from './package.json';
 import { defineThemeConfig } from 'dumi-theme-antd/dist/defineThemeConfig';
 
 export default defineConfig({
-  mfsu: false,
   outputPath: 'docs-dist',
-  ssr: process.env.NODE_ENV === 'development' ? false : {},
   base: process.env.NODE_ENV === 'production' ? "/react-draggable-plus" : "/",
   publicPath: process.env.NODE_ENV === 'production' ? "/react-draggable-plus/" : "/",
   favicons: ['https://vue-draggable-plus.pages.dev/logo.svg'],
