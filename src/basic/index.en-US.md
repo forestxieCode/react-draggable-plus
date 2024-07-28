@@ -20,5 +20,4 @@ description="Use components to complete drag and drop sorting"></code>
 
 <code src="./function.tsx"
 title="function usage"
-desc="Use function to complete drag and drop sorting"
-></code>
+description="Use function to complete drag and drop sorting"></code>

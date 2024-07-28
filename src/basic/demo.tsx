@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react"
-import { ReactDraggablePlush } from "react-draggable-plus"
+import { ReactDraggablePlus } from "react-draggable-plus"
 import PreviewList from "react-draggable-plus/builtins/PreviewList"
 
 const Demo = () => {
@@ -36,7 +36,7 @@ const Demo = () => {
       <button type="button" onClick={() => el.current?.pause()}>pause</button>
       <button type="button" onClick={ ()=>{ setDisabled(true) }}>disabled</button>
       <div className="flex m-t-20px">
-        <ReactDraggablePlush
+        <ReactDraggablePlus
           ref={el}
           list={list}
           setList={setList}
@@ -53,7 +53,7 @@ const Demo = () => {
               return <div className="cursor-move h-30 bg-gray-500/5 rounded p-3" key={item.id}>{item.name}</div>
             })
           }
-        </ReactDraggablePlush>
+        </ReactDraggablePlus>
         <PreviewList list={list}></PreviewList>
     </div>
   </>

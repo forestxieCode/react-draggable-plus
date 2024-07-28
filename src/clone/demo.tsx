@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { ReactDraggablePlush } from 'react-draggable-plus'
+import { ReactDraggablePlus } from 'react-draggable-plus'
 import PreviewList from "react-draggable-plus/builtins/PreviewList"
 import Sortable from "sortablejs"
 
@@ -36,7 +36,7 @@ const Demo = () => {
 
   return <>
   <div className="flex">
-    <ReactDraggablePlush
+    <ReactDraggablePlus
       list={list}
       setList={setList}
       animation={150}
@@ -50,8 +50,8 @@ const Demo = () => {
           return <div className="cursor-move h-30 bg-gray-500/5 rounded p-3" key={item.id}>{item.name}</div>
         })
       }
-    </ReactDraggablePlush>
-    <ReactDraggablePlush
+    </ReactDraggablePlus>
+    <ReactDraggablePlus
       list={list2}
       setList={setList2}
       animation={150}
@@ -63,7 +63,7 @@ const Demo = () => {
             return <div className="cursor-move h-30 bg-gray-500/5 rounded p-3" key={item.id}>{item.name}</div>
           })
         }
-    </ReactDraggablePlush>
+    </ReactDraggablePlus>
   </div>
   <div className="flex justify-between">
     <PreviewList list={list} className="m-auto"></PreviewList>

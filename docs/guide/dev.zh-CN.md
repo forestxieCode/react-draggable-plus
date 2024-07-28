@@ -1,8 +1,7 @@
 ---
+group: 指南
+order: 2
 title: 使用说明
-nav:
-  title: 指南
-  path: /guide
 ---
 
 # react-draggable-plus
@@ -32,7 +31,7 @@ nav:
 
 ```ts
 import React, { useRef, useState } from "react"
-import { ReactDraggablePlush } from "react-draggable-plus"
+import { ReactDraggablePlus } from "react-draggable-plus"
 const Demo = () => {
   const el = useRef<any>(null)
   const [list, setList] = useState([{
@@ -52,7 +51,7 @@ const Demo = () => {
     id: 4
   }])
   return <>
-    <ReactDraggablePlush
+    <ReactDraggablePlus
       ref={el}
       list={list}
       setList={setList}
@@ -65,7 +64,7 @@ const Demo = () => {
           return <div className="cursor-move h-30 bg-gray-500/5 rounded p-3" key={item.id}>{item.name}</div>
         })
       }
-    </ReactDraggablePlush>
+    </ReactDraggablePlus>
   </>
 }
 export default Demo
