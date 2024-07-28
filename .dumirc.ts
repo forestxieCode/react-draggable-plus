@@ -64,12 +64,12 @@ export default defineConfig({
       'en-US': [
         {
           text: 'Start',
-          link: '/guide/dev'
+          link: '/guide/dev-en'
         },
         {
           type: 'primary',
           text: 'Demo',
-          link: '/components/basic'
+          link: '/components/basic-en'
         }
       ],
     },
