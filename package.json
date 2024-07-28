@@ -1,6 +1,6 @@
 {
   "name": "react-draggable-plus",
-  "version": "0.0.3",
+  "version": "0.0.2",
   "description": "Universal Drag-and-Drop Component Supporting React",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
