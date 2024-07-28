@@ -1,11 +1,10 @@
 {
   "name": "react-draggable-plus",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Universal Drag-and-Drop Component Supporting React",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "release": "standard-version",
     "start": "npm run dev",
     "dev": "dumi dev",
     "build": "father build",
@@ -17,7 +16,7 @@
     "lint": "npm run lint:es && npm run lint:css",
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-    "prepublishOnly": "father doctor && npm run build && npm run release"
+    "prepublishOnly": "father doctor && npm run build"
   },
   "author": {
     "name": "forest",
@@ -98,7 +97,6 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "sortablejs": "^1.15.2",
-    "standard-version": "^9.5.0",
     "stylelint": "^14.9.1",
     "unocss": "^0.61.5"
   }
