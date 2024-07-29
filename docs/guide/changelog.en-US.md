@@ -3,7 +3,7 @@ order: 1
 title: Change Log
 timeline: true
 tag:
-  title: '0.0.2'
+  title: '0.0.3'
   color: success
 ---
 
@@ -15,3 +15,11 @@ tag:
 
 - 🛠 基于sortablejs完成react组件的封装
 - 💄 完成react-draggable-plus文档的部分案例
+
+## 0.0.3
+
+`2024-07-29`
+
+- 🛠 完成指定目标容器的Demo
+
+

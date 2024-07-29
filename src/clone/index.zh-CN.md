@@ -8,7 +8,7 @@ toc: content
 
 # 拖拽克隆
 
-从一个列表中拖拽克隆到另一个列表，可以通过 `clone` 属性来开启它，内部默认使用 `JSON.parse(JSON.stringify())` 来实现克隆，如果您需要传递自定义函数，请使用 `clone` 属性传递函数，使用方式[自定义克隆](../custom-clone/)。
+从一个列表中拖拽克隆到另一个列表，可以通过 `clone` 属性来开启它，内部默认使用 `JSON.parse(JSON.stringify())` 来实现克隆，如果您需要传递自定义函数，请使用 `clone` 属性传递函数，使用方式[自定义克隆](../custom-clone/index.zh-CN.md)。
 
 我们在使用该功能时，需要注意：
 1. 被克隆组件的 `group` 属性中的 `pull` 属性必须为 `clone`，否则无法克隆。

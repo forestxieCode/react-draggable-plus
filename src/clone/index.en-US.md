@@ -9,7 +9,7 @@ toc: content
 # Drag Clone
 
 
-Drag and drop from one list to another list, you can use the `clone` attribute to enable it, internally use `JSON.parse(JSON.stringify())` to achieve cloning by default, if you need to pass a custom function, please Use the `clone` attribute to pass the function, and use the method to [customize the clone](../custom-clone/).
+Drag and drop from one list to another list, you can use the `clone` attribute to enable it, internally use `JSON.parse(JSON.stringify())` to achieve cloning by default, if you need to pass a custom function, please Use the `clone` attribute to pass the function, and use the method to [customize the clone](../custom-clone/index.en-US.md).
 
 When we use this function, we need to pay attention to：
 1. The `pull` attribute in the `group` attribute of the cloned component must be `clone`, otherwise it cannot be cloned.
