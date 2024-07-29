@@ -4,6 +4,8 @@
   --vp-c-divider: #e2e2e3;
   --vp-c-bg: #ffffff;
   --vp-c-text-1: rgba(60, 60, 67);
+  --vp-c-text-2: rgba(60, 60, 67, .78);
+  --vp-c-bg-soft: #f6f6f7;
 }
 
 
@@ -67,4 +69,36 @@ input[type='number'] {
 
 .dumi-default-previewer-demo .demo-actions .demo-platforms {
   visibility: hidden;
+}
+
+.dumi-default-previewer-demo table{
+  display: table;
+  width: 100%;
+  font-size: 15px;
+  border-collapse: collapse;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.dumi-default-previewer-demo th {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  background-color: var(--vp-c-bg-soft);
+}
+
+.dumi-default-previewer-demo tr {
+  background-color: var(--vp-c-bg);
+  border-top: 1px solid var(--vp-c-divider);
+  transition: background-color .5s;
+}
+
+.dumi-default-previewer-demo tr:nth-child(2n) {
+  background-color: var(--vp-c-bg-soft);
+}
+
+.dumi-default-previewer-demo th, .dumi-default-previewer-demo td {
+  border: 1px solid var(--vp-c-divider);
+  padding: 8px 16px;
 }
