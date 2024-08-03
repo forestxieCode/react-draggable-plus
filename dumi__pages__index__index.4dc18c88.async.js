@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkreact_draggable_plus=self.webpackChunkreact_draggable_plus||[]).push([[8863],{86893:function(o,a,_){_.r(a);var e=_(77070),n=_(75271),t=_(52676),u=function(){return(0,t.jsx)("div",{children:(0,t.jsx)(e.Z,{})})};a.default=u},77070:function(o,a,_){var e=_(75271),n=_(42260),t=_(24341),u=function(){return(0,t.tZ)(n.Z,null)};a.Z=u}}]);
