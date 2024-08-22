@@ -14,15 +14,17 @@ export default defineConfig({
   ],
   themeConfig: defineThemeConfig({
     lastUpdated: true,
+    bannerConfig: {
+      showBanner: true,
+      bannerMobileImgUrl: '/images/banner.png', // antd v5 官网自带 banner 图
+      bannerImgUrl: '/images/banner.png' // antd v5 官网自带 banner 图
+    },
     github: 'https://github.com/forestxieCode/react-draggable-plus',
     name: 'react-draggable-plus',
     title: 'React Draggable Plus',
     description: {
       'zh-CN': '基于Sortablejs封装的 React 拖拽组件',
       'en-US': 'React drag-and-drop component based on Sortablejs wrapping'
-    },
-    bannerConfig: {
-      showBanner: false
     },
     loading: {
       skeleton: ['/guide', '/api', '/components']
