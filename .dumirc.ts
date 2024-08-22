@@ -15,9 +15,7 @@ export default defineConfig({
   themeConfig: defineThemeConfig({
     lastUpdated: true,
     bannerConfig: {
-      showBanner: true,
-      bannerMobileImgUrl: '/images/banner.png', // antd v5 官网自带 banner 图
-      bannerImgUrl: '/images/banner.png' // antd v5 官网自带 banner 图
+      showBanner: false,
     },
     github: 'https://github.com/forestxieCode/react-draggable-plus',
     name: 'react-draggable-plus',
